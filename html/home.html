@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Vibe Home Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('./static/img/pixel/sun.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      width: 600px;
+      height: 800px;
+    }
+    .pixel-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .cube-container {
+      margin-top: 20px;
+    }
+
+    .dice-cube {
+      width: 100px;
+      height: 100px;
+    }
+
+    .icon-container {
+      display: flex;
+      justify-content: space-between;
+      width: 200px;
+      margin-top: 20px;
+    }
+    .icon-container img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon-container1 {
+      display: flex;
+      width: 200px;
+      margin-top: 20px;
+    }
+    .icon-container1 h3{
+        height: 0px;
+    }
+    .ww {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    .description {
+      margin-top: 20px;
+    }
+
+    .matrix-buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+      width: 300px;
+    }
+
+    .matrix {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .matrix-row {
+      display: flex;
+      justify-content: space-between;
+      width: 200px;
+    }
+
+    .matrix-cell {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ccc;
+    }
+
+    /* New styles for the image grid */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .item-image {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .item-image {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+      .item-image img {
+      max-width: 100%; /* Resize images to fit the container */
+      max-height: 100%; /* Resize images to fit the container */
+    }
+  </style>
+</head>
+<body>
+  <div class="pixel-container">
+    <div class="cube-container">
+      <img src="./static/img/pixel/pixel_260838.png" class="dice-cube" alt="Dice Cube" />
+    </div>
+    <div class="icon-container1">
+       <img src="./static/img/pixel/health.png" class="icon cart-icon" alt="Cart" />
+        <img src="./static/img/pixel/health.png" class="icon cart-icon" alt="Cart" />
+         <img src="./static/img/pixel/health.png" class="icon cart-icon" alt="Cart" />
+          <img src="./static/img/pixel/health.png" class="icon cart-icon" alt="Cart" />
+           <img src="./static/img/pixel/health.png" class="icon cart-icon" alt="Cart" />
+    </div>
+     <div class="icon-container1">
+       <img src="./static/img/pixel/star.png" class="icon cart-icon" alt="Cart" />
+        <img src="./static/img/pixel/star.png" class="icon cart-icon" alt="Cart" />
+         <img src="./static/img/pixel/star.png" class="icon cart-icon" alt="Cart" />
+          <img src="./static/img/pixel/star.png" class="icon cart-icon" alt="Cart" />
+           <img src="./static/img/pixel/star.png" class="icon cart-icon" alt="Cart" />
+    </div>
+     <div class="icon-container1">
+       <img src="./static/img/pixel/euro.png" class="icon cart-icon" alt="Cart" />
+        <h3>1000</h3>
+        <img src="./static/img/pixel/knight.jpg" class="ww" alt="Cart" />
+    </div>
+    <div class="icon-container">
+      <a href="cart.html">
+        <img src="./static/img/pixel/cart.png" class="icon cart-icon" alt="Cart" />
+      </a>
+       <a href="/pages/cart/cart">
+        <img src="./static/img/inventory.png" class="icon inventory-icon" alt="Inventory" />
+      </a>
+      <a href="storage.html">
+        <img src="./static/img/pixel/home.png" class="icon home-icon" alt="Home" />
+      </a>
+      <a href="help.html">
+        <img src="./static/img/pixel/help.png" class="icon home-icon" alt="Help" />
+      </a>
+    </div>
+    <p class="description">Please dice the cube</p>
+
+    <div class="matrix-buttons">
+      <button onclick="generateMatrix()">Generate Matrix 1</button>
+      <button onclick="generateMatrix()">Generate Matrix 2</button>
+      <button onclick="generateMatrix()">Generate Matrix 3</button>
+    </div>
+
+    <div class="image-grid">
+        <!-- Replace item(1-9).png with the actual image names -->
+        <div class="item-image"><img src="./static/img/pixel/item1.png" alt="Item 1"></div>
+        <div class="item-image"><img src="./static/img/pixel/item2.png" alt="Item 2"></div>
+        <div class="item-image"><img src="./static/img/pixel/item3.png" alt="Item 3"></div>
+        <div class="item-image"><img src="./static/img/pixel/item4.png" alt="Item 4"></div>
+        <a href="intro.html"> <div class="item-image"><img src="./static/img/pixel/item5.png" alt="Item 5"></div> </a>
+       
+        <div class="item-image"><img src="./static/img/pixel/item6.png" alt="Item 6"></div>
+        <div class="item-image"><img src="./static/img/pixel/item7.png" alt="Item 7"></div>
+        <div class="item-image"><img src="./static/img/pixel/item8.png" alt="Item 8"></div>
+        <div class="item-image"><img src="./static/img/pixel/item9.png" alt="Item 9"></div>
+      </div>
+    
+
+    <script>
+      function generateMatrix() {
+        // Your matrix generation logic here
+      }
+    </script>
+  </div>
+</body>
+</html>
